@@ -1,0 +1,14 @@
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\bin\Debug\ImageRecognitionSystem.exe.config
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\bin\Debug\ImageRecognitionSystem.exe
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\bin\Debug\ImageRecognitionSystem.pdb
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem.csprojResolveAssemblyReference.cache
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\MainWindow.g.cs
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\App.g.cs
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem_MarkupCompile.cache
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem_MarkupCompile.lref
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\MainWindow.baml
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem.g.resources
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem.Properties.Resources.resources
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem.csproj.GenerateResource.Cache
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem.exe
+C:\Users\Nobuaki\Documents\Visual Studio 2015\Projects\ImageRecognitionSystem\ImageRecognitionSystem\obj\Debug\ImageRecognitionSystem.pdb
