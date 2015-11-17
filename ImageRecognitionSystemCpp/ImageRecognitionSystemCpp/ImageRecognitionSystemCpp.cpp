@@ -40,21 +40,32 @@ cv::Mat Algorithm1(cv::Mat screen,cv::Mat temp)
 	cv::Laplacian(s_plane[i], t1, CV_32F, 1, 1);
 	cv::Laplacian(t_plane[i], t2, CV_32F, 1, 1);
 
-	TemplateMatch(t1, t2, result);
-
-	//TemplateMatch(s_plane[i], t_plane[i], result);
-	//TemplateMatch(screen, temp, result);
-
-	cv::imshow("s_plane", t1);
-	cv::imshow("t_plane", t2);
-
 	cv::Mat show = screen.clone();
-	std::vector<cv::Rect> maxpt;
-	maxpt.clear();
-	SearchMatch(result, 0.5f, maxpt, temp);
-	DrawRectangle(show, maxpt, cv::Scalar(0, 0, 255));
 
-	cv::imshow("result_t", result);
+	for (int i = 0; i < 90; ++i) {
+
+		cv::Mat rotet_mat(cv::getRotationMatrix2D(cv::Point2f(t2.cols / 2.0,t2.rows / 2.0),i,1));
+
+		cv::Mat roteted(t2);
+		cv::warpAffine(t2, roteted, rotet_mat,cv::Size(roteted.cols,roteted.rows));
+		TemplateMatch(t1, roteted, result);
+
+
+		//TemplateMatch(s_plane[i], t_plane[i], result);
+		//TemplateMatch(screen, temp, result);
+
+		//cv::imshow("s_plane", t1);
+		//cv::imshow("t_plane", roteted);
+
+		
+		std::vector<cv::Rect> maxpt;
+		maxpt.clear();
+		SearchMatch(result, 0.5f, maxpt, temp);
+		DrawRectangle(show, maxpt, cv::Scalar(0, 0, 255));
+		
+	}
+
+	//cv::imshow("result_t", result);
 
 	return show;
 }
