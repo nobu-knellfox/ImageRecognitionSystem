@@ -51,7 +51,17 @@ namespace ImageRecognitionSystem
 
         private void Recognition_Click(object sender, RoutedEventArgs e)
         {
-            recog.Recognition(screen_ofd.FileName,template_ofd.FileName);
+            recog.Recognition(screen_ofd.FileName,template_ofd.FileName,2);
+        }
+
+        private void Recognition1_Click(object sender, RoutedEventArgs e)
+        {
+            recog.Recognition(screen_ofd.FileName, template_ofd.FileName, 1);
+        }
+
+        private void Recognition2_Click(object sender, RoutedEventArgs e)
+        {
+            recog.Recognition(screen_ofd.FileName, template_ofd.FileName, 0);
         }
     }
 }

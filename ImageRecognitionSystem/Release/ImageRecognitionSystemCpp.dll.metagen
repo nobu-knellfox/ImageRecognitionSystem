@@ -12,4 +12,4 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 Class ImageRecognitionSystemCpp.ImageRecognition: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Methods:
-    Recognition(String, String): PrivateScope, Public, HideBySig
+    Recognition(String, String, Int32): PrivateScope, Public, HideBySig

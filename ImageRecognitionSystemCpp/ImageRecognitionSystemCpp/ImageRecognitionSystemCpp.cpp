@@ -8,22 +8,22 @@
 #include <string>
 
 
-cv::Mat Algorithm1(cv::Mat screen, cv::Mat temp);
+cv::Mat Algorithm1(cv::Mat screen, cv::Mat temp,int index);
 std::string MarshalString(String ^ s);
 
 void DrawRectangle(cv::Mat& img, std::vector<cv::Rect>& maxpt, cv::Scalar color);
 void TemplateMatch(cv::Mat screen, cv::Mat t_img, cv::Mat& result);
 void SearchMatch(const cv::Mat& result, float threshold, std::vector<cv::Rect>& maxpt, cv::Mat t_img);
 
-void ImageRecognitionSystemCpp::ImageRecognition::Recognition(String ^ screen_file, String ^ template_file)
+void ImageRecognitionSystemCpp::ImageRecognition::Recognition(String ^ screen_file, String ^ template_file,int index)
 {
 	cv::Mat a = cv::imread(MarshalString(screen_file));
 	cv::Mat b = cv::imread(MarshalString(template_file));
 
-	cv::imshow("result",Algorithm1(a,b));
+	cv::imshow("result",Algorithm1(a,b,index));
 }
 
-cv::Mat Algorithm1(cv::Mat screen,cv::Mat temp)
+cv::Mat Algorithm1(cv::Mat screen,cv::Mat temp,int index)
 {
 	std::vector<cv::Mat> s_plane;
 	std::vector<cv::Mat> t_plane;
@@ -35,13 +35,15 @@ cv::Mat Algorithm1(cv::Mat screen,cv::Mat temp)
 
 	cv::Mat show = screen.clone();
 
-	TemplateMatch(s_plane[1], t_plane[1], result);
+	TemplateMatch(s_plane[index], t_plane[index], result);
 
+	cv::imshow("s_plane", s_plane[index]);
+	cv::imshow("t_plane", t_plane[index]);
 		
 	std::vector<cv::Rect> maxpt;
 	maxpt.clear();
 
-	SearchMatch(result, 0.75f, maxpt, temp);
+	SearchMatch(result, 0.95f, maxpt, temp);
 	DrawRectangle(show, maxpt, cv::Scalar(0, 0, 255));
 	
 	cv::imshow("result_t", result);
