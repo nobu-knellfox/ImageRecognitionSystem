@@ -43,7 +43,7 @@ cv::Mat Algorithm1(cv::Mat screen,cv::Mat temp,int index)
 	std::vector<cv::Rect> maxpt;
 	maxpt.clear();
 
-	SearchMatch(result, 0.95f, maxpt, temp);
+	SearchMatch(result, 0.7f, maxpt, temp);
 	DrawRectangle(show, maxpt, cv::Scalar(0, 0, 255));
 	
 	cv::imshow("result_t", result);
